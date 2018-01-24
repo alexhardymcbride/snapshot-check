@@ -6,3 +6,5 @@ The server running the script needs to have VMware's PowerCLI 6.0 or later insta
 This script is intended to be run as a scheduled task, with an account that has the following permissions:
 1. Logon as a batch job on the server running the script.
 2. At least read-only access to vCenter.
+
+Each section is only added to the email if snapshots are found, or VMs with consolidation needed are found. If neither are found, an email is not sent.
