@@ -87,8 +87,6 @@ if ($snapshots -Or $cons) {
         $body += ($all_cons_info | ConvertTo-HTML -Fragment)
     }
 
-    # Export the email body
-    $Body | Out-File C:\Scripts\Output.htm
 
     # Send the email
 	Send-MailMessage -To $Recipient -From $Sender -Subject $Subject -BodyAsHtml -Body $Body -SmtpServer $SMTPServer
